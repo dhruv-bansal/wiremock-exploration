@@ -1,0 +1,11 @@
+// refersh the wiremock mappings
+POST http://localhost:8080/__admin/mappings/reset
+content-type: application/json
+
+###
+GET http://localhost:8080/api/withqueryparam?param1=value1
+content-type: application/json
+
+###
+GET http://localhost:8080/api/account/anything
+content-type: application/json

@@ -1,0 +1,46 @@
+{
+        "mappings": [
+            {
+                "request": {
+                    "urlPath": "/api/withqueryparam",
+                    "method": "GET",
+                    "queryParameters": {
+                        "param1": {
+                                "optional": true,
+                                "matches": ".*"
+                        }
+                }
+                },
+                "response": {
+                        "status": 200,
+                        "jsonBody": {
+                            "query1": "{{request.query}}"
+                        },
+                        "transformers": ["response-template"]
+                },
+                "metadata": {
+                    "debug": {
+                        "created": "2023-03-28T09:23:52.672764Z",
+                        "lastModified": "2023-03-28T09:23:52.672764Z",
+                        "notes": "This is a debug note"
+                    }
+                }
+            },
+            {
+                "request": {
+                    "method": "GET",
+                    "urlPathPattern": "/api/account/.*"
+                },
+                "response": {
+                    "status": 200,
+                    "jsonBody": {
+                        "account": "{{request.path.[2]}}"
+                    },
+                    "transformers": ["response-template"],
+                    "headers": {
+                        "Content-Type": "application/json"
+                    }
+                }
+            }
+        ]
+}
