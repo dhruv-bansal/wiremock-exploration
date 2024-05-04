@@ -13,6 +13,7 @@ docker run -it --rm \
   -p 8080:8080 \
   --name wiremock \
   -v $PWD:/home/wiremock \
+   wiremock/wiremock:3.5.4
 ```
 Note. Local folder has two subfolders mappings and __files
 
