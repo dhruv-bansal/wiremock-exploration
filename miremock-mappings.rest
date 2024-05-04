@@ -7,5 +7,13 @@ GET http://localhost:8080/api/withqueryparam?param1=value1
 content-type: application/json
 
 ###
+GET http://localhost:8080/api/withqueryparam?param1=value1&paramTER2=value2
+content-type: application/json
+
+###
+GET http://localhost:8080/api/withgenericqueryparam?param12=value1&paramTER2=value2
+content-type: application/json
+
+###
 GET http://localhost:8080/api/account/anything
 content-type: application/json
